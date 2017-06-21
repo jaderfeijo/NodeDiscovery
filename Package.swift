@@ -3,5 +3,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "NodeDiscovery"
+    name: "NodeDiscovery",
+	targets: [
+		Target(
+			name: "NodeDiscovery",
+			dependencies: [
+				"NodeDiscoveryCore"
+			]
+		),
+		Target(name: "NodeDiscoveryCore")
+	]
 )
