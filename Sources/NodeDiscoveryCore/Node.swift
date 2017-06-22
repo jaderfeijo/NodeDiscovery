@@ -1,18 +1,20 @@
 import Foundation
 
+public typealias NodeAddress = Int32
+
 public class Node: Addressable {
-	typealias Address = NodeAddress
+	public typealias Address = NodeAddress
 	
-	private(set) var addressProvider: NodeAddressProviding
+	public private(set) var addressProvider: NodeAddressProviding
 	
-	let address: NodeAddress = 0
-	private(set) var searchFactor: Double = 1.0
+	public let address: NodeAddress = 0
+	public private(set) var searchFactor: Double = 1.0
 	
-	init(addressProvider: NodeAddressProviding) {
+	public init(addressProvider: NodeAddressProviding) {
 		self.addressProvider = addressProvider
 	}
 	
-	func beginDiscovery() {
+	public func beginDiscovery() {
 		
 	}
 	

@@ -1,8 +1,6 @@
 import Foundation
 
-typealias NodeAddress = Int32
-
-protocol NodeAddressProviding {
+public protocol NodeAddressProviding {
 	var offset: Int { get set }
 	func next() -> NodeAddress
 }

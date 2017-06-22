@@ -1,15 +1,15 @@
 import Foundation
 
-class EphemeralNodeSpace {
+public class EphemeralNodeSpace {
 	private(set) var nodes: [Node] = []
 }
 
 extension EphemeralNodeSpace: Queryable {
-	typealias AddressableType = Node
+	public typealias AddressableType = Node
 
-	func first(with address: NodeAddress) -> Node? {
+	public func first(with address: NodeAddress) -> Node? {
 		if let index = nodes.index(where: { $0.address == address }) {
-			
+			return nodes[index]
 		}
 		return nil
 	}

@@ -1,17 +1,19 @@
 import Foundation
 
-class NodeAddressRandomiser: NodeAddressProviding {
-	private(set) var seed: Int
+public class NodeAddressRandomiser: NodeAddressProviding {
+	typealias Address = NodeAddress
+
+	public private(set) var seed: Int
 	
-	init(seed: Int) {
+	public init(seed: Int) {
 		self.seed = seed
 	}
 	
 	// MARK: - NodeAddressProviding -
 	
-	var offset: Int = 0
+	public var offset: Int = 0
 	
-	func next() -> NodeAddress {
+	public func next() -> NodeAddress {
 		return 0
 	}
 }
